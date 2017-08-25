@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TableVC.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   
+
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    TableVC *mainVC = [[TableVC alloc]init];
+    
+    
+    self.window.rootViewController = mainVC;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

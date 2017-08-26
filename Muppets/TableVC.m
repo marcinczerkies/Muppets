@@ -15,59 +15,18 @@
 @interface TableVC ()
 
 @property (strong, nonatomic) NSMutableArray *muppets;
-@property (nonatomic, assign) BOOL working;
 @end
 
 @implementation TableVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-//    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"View" owner:self options:nil];
-//    UIView *customView;
-//    
-//    customView = (UIView *)[nib objectAtIndex:0];
-//    
-//    [self.view addSubview:customView];
     
     self.title = @"Muppets List";
     [self.tableView setContentInset:UIEdgeInsetsMake(0,0,0,0)];
     
     [self initData];
-    
-//    self.muppets = [[NSMutableArray alloc]init];
-//    
-//    NSURL *url = [NSURL URLWithString:@"http://muppet.wikia.com/api/v1/Articles/Top?expand=1&category=The_Muppets_Characters&limit=75"];
-//    
-//    NSData *data = [NSData dataWithContentsOfURL:url];
-//    
-//    if( data == nil){
-//        //  NSLog(@"Nie ma pliku");
-//    }
-//    
-//    NSError *error = nil;
-//    
-//    NSDictionary *muppets = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-//    
-//    if(muppets) {
-//        for (NSDictionary *object in muppets[@"items"]) {
-//        
-//            Muppet *muppet = [[Muppet alloc]init];
-//        
-//            muppet.thumbUrl = object[@"thumbnail"];
-//            muppet.desc = object[@"abstract"];
-//            muppet.title = object[@"title"];
-//            muppet.uid = object[@"id"];
-//        
-//            [self.muppets addObject:muppet];
-//        }
-//    }
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -121,9 +80,7 @@
         
     }
     else {
-       
-               [cell.favoruiteStar setTitleColor:[UIColor colorWithRed:204/255.0 green:204/255.0 blue:255/255.0 alpha:1.0] forState:UIControlStateNormal];
-        
+               [cell.favoruiteStar setTitleColor:[UIColor colorWithRed:9/255.0 green:80/255.0 blue:208/255.0 alpha:1.0] forState:UIControlStateNormal];
     }
 
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@", muppet.thumbUrl]];
@@ -146,22 +103,18 @@
 }
 - (IBAction)showOnlyStarred:(UIButton *)sender {
   
-    NSLog(@"sdfsdfsd");
     NSArray *tempArray = [self.muppets copy];
     [self.muppets removeAllObjects];
     for (Muppet *object in tempArray) {
         
         for (NSNumber *objectIN in [QASharedModel qaSharedModel].FavouritesList) {
-          //  NSLog(@"%@, %@",objectIN, object.uid);
             if([objectIN intValue] == [object.uid intValue]){
                 [self.muppets addObject:object];
-                
             }
         }
     }
     
     [self.tableView reloadData];
-    
 }
 - (IBAction)showAll:(UIButton *)sender {
     [self initData];
@@ -186,13 +139,14 @@
     
     if(muppets) {
         for (NSDictionary *object in muppets[@"items"]) {
-            
+            NSLog(@"%@",object);
             Muppet *muppet = [[Muppet alloc]init];
             
             muppet.thumbUrl = object[@"thumbnail"];
             muppet.desc = object[@"abstract"];
             muppet.title = object[@"title"];
             muppet.uid = object[@"id"];
+            muppet.urlWeb = object[@"url"];
             
             [self.muppets addObject:muppet];
         }

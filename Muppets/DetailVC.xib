@@ -24,38 +24,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orT-5I-rea">
-                    <rect key="frame" x="16" y="58" width="343" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="20" y="60" width="335" height="18"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcs-a2-gGk">
-                    <rect key="frame" x="75" y="87" width="224" height="178"/>
+                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcs-a2-gGk">
+                    <rect key="frame" x="75" y="86" width="224" height="150"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="178" id="PWF-O6-6gm"/>
+                        <constraint firstAttribute="height" constant="150" id="PWF-O6-6gm"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38d-4R-pcB">
-                    <rect key="frame" x="16" y="20" width="62" height="30"/>
+                    <rect key="frame" x="20" y="20" width="62" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="62" id="sL1-xZ-p7U"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <state key="normal" title="&lt; Back"/>
                     <connections>
                         <action selector="backToTableVC:" destination="-1" eventType="touchUpInside" id="dFX-0l-k9D"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnj-4V-1IN">
-                    <rect key="frame" x="16" y="273" width="343" height="128"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnj-4V-1IN">
+                    <rect key="frame" x="20" y="281" width="335" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="10G-mh-yw8"/>
+                        <constraint firstAttribute="height" constant="40" id="5Jw-rI-P5K"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prM-TG-Dxd">
-                    <rect key="frame" x="327" y="47" width="32" height="32"/>
+                    <rect key="frame" x="323" y="46" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="DhO-mP-GSy"/>
                         <constraint firstAttribute="width" constant="32" id="fD2-Vm-YnJ"/>
@@ -66,21 +67,41 @@
                         <action selector="addToFavoruite:" destination="-1" eventType="touchUpInside" id="lvO-Ke-juX"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsK-s0-XzF">
+                    <rect key="frame" x="123" y="243" width="128" height="30"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Open web in Safari"/>
+                    <connections>
+                        <action selector="openUrl:" destination="-1" eventType="touchUpInside" id="NGT-qd-4HW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXe-Yh-fyo">
+                    <rect key="frame" x="75" y="86" width="224" height="149"/>
+                    <connections>
+                        <action selector="openUrl:" destination="-1" eventType="touchUpInside" id="uIY-75-Eld"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="38d-4R-pcB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="1eN-M7-eZP"/>
+                <constraint firstItem="jnj-4V-1IN" firstAttribute="trailing" secondItem="orT-5I-rea" secondAttribute="trailing" id="2KG-Ru-eQn"/>
+                <constraint firstItem="jnj-4V-1IN" firstAttribute="leading" secondItem="orT-5I-rea" secondAttribute="leading" id="5ts-5j-Sxa"/>
                 <constraint firstItem="bcs-a2-gGk" firstAttribute="top" secondItem="orT-5I-rea" secondAttribute="bottom" constant="8" symbolic="YES" id="HUZ-tR-je9"/>
+                <constraint firstItem="WXe-Yh-fyo" firstAttribute="top" secondItem="bcs-a2-gGk" secondAttribute="top" id="IZO-5s-xjk"/>
                 <constraint firstItem="orT-5I-rea" firstAttribute="top" secondItem="38d-4R-pcB" secondAttribute="bottom" constant="8" symbolic="YES" id="Iah-WU-eac"/>
                 <constraint firstItem="bcs-a2-gGk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LYx-rs-Nek"/>
                 <constraint firstItem="38d-4R-pcB" firstAttribute="leading" secondItem="orT-5I-rea" secondAttribute="leading" id="Lsj-tt-ySi"/>
                 <constraint firstItem="prM-TG-Dxd" firstAttribute="trailing" secondItem="orT-5I-rea" secondAttribute="trailing" id="MDe-Jk-sSg"/>
-                <constraint firstItem="jnj-4V-1IN" firstAttribute="top" secondItem="bcs-a2-gGk" secondAttribute="bottom" constant="8" symbolic="YES" id="Pai-DE-fXL"/>
                 <constraint firstItem="prM-TG-Dxd" firstAttribute="bottom" secondItem="orT-5I-rea" secondAttribute="bottom" id="PpN-7y-Gik"/>
-                <constraint firstItem="orT-5I-rea" firstAttribute="leading" secondItem="jnj-4V-1IN" secondAttribute="leading" id="bwK-b1-ZUo"/>
-                <constraint firstItem="38d-4R-pcB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="gNQ-Ua-bSN"/>
+                <constraint firstItem="jnj-4V-1IN" firstAttribute="centerX" secondItem="IsK-s0-XzF" secondAttribute="centerX" id="X47-dj-bRo"/>
+                <constraint firstItem="WXe-Yh-fyo" firstAttribute="leading" secondItem="bcs-a2-gGk" secondAttribute="leading" id="fk7-r8-rf3"/>
+                <constraint firstItem="38d-4R-pcB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="gNQ-Ua-bSN"/>
+                <constraint firstItem="WXe-Yh-fyo" firstAttribute="trailing" secondItem="bcs-a2-gGk" secondAttribute="trailing" id="hPq-HT-HKj"/>
+                <constraint firstItem="jnj-4V-1IN" firstAttribute="top" secondItem="IsK-s0-XzF" secondAttribute="bottom" constant="8" symbolic="YES" id="ika-jh-o3n"/>
+                <constraint firstItem="IsK-s0-XzF" firstAttribute="top" secondItem="WXe-Yh-fyo" secondAttribute="bottom" constant="8" symbolic="YES" id="sLF-AY-dcF"/>
                 <constraint firstItem="orT-5I-rea" firstAttribute="centerX" secondItem="bcs-a2-gGk" secondAttribute="centerX" id="sxw-TS-kPO"/>
-                <constraint firstItem="orT-5I-rea" firstAttribute="trailing" secondItem="jnj-4V-1IN" secondAttribute="trailing" id="thr-0a-hRm"/>
+                <constraint firstItem="IsK-s0-XzF" firstAttribute="top" secondItem="bcs-a2-gGk" secondAttribute="bottom" constant="7" id="v0a-xz-N8w"/>
                 <constraint firstItem="bcs-a2-gGk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="75" id="vg8-Nf-osj"/>
             </constraints>
             <point key="canvasLocation" x="26.5" y="52.5"/>

@@ -9,11 +9,7 @@
 #import "Muppet.h"
 
 @interface Muppet()
-
 @end
 
 @implementation Muppet
-
-
-
 @end

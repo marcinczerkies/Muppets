@@ -9,15 +9,11 @@
 #import "QASharedModel.h"
 
 
-
-
 @implementation QASharedModel
-
 static QASharedModel *qaSharedModel = nil;
-
 + (QASharedModel *) qaSharedModel
 {
-    
+   
     @synchronized(self)
     {
         if (qaSharedModel == nil)
@@ -41,22 +37,7 @@ static QASharedModel *qaSharedModel = nil;
     
     qaSharedModel = nil;
 }
-//
-//- (void)deleteFromQAListQuestionId:(NSUInteger)QuestionId
-//{
-//    UserQA *localObject = [[UserQA alloc]init];
-//    
-//    for (UserQA *item in self.QAList) {
-//        Question *question = [[Question alloc]init];
-//        question = item.question;
-//        if(question.questionId == QuestionId){
-//            localObject = item;
-//        }
-//    }
-//    
-//    [self.QAList removeObjectIdenticalTo:localObject];
-//
-//}
+
 
 
 @end

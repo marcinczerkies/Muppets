@@ -31,13 +31,12 @@
     if ( [[QASharedModel qaSharedModel].FavouritesList containsObject:uid] ) {
 
             [[QASharedModel qaSharedModel].FavouritesList removeObject:uid];
-            [self.favoruiteStar setTitleColor:[UIColor colorWithRed:204/255.0 green:204/255.0 blue:255/255.0 alpha:1.0] forState:UIControlStateNormal];
+            [self.favoruiteStar setTitleColor:[UIColor colorWithRed:9/255.0 green:80/255.0 blue:208/255.0 alpha:1.0] forState:UIControlStateNormal];
         
          }
     else {
             [self.favoruiteStar setTitleColor:[UIColor colorWithRed:204/255.0 green:204/255.0 blue:0/255.0 alpha:1.0] forState:UIControlStateNormal];
             [[QASharedModel qaSharedModel].FavouritesList addObject:uid];
-            NSLog(@"dodano");
     }
 
     UITableView *parentTable = (UITableView *)self.superview;

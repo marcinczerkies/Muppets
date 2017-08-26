@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TableVC.h"
+#import "QASharedModel.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
    
-
+    [QASharedModel qaSharedModel].FavouritesList  = [[[NSUserDefaults standardUserDefaults] objectForKey:@"favoruites"] mutableCopy];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

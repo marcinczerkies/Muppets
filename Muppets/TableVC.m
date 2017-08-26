@@ -80,7 +80,7 @@
         
     }
     else {
-               [cell.favoruiteStar setTitleColor:[UIColor colorWithRed:9/255.0 green:80/255.0 blue:208/255.0 alpha:1.0] forState:UIControlStateNormal];
+               [cell.favoruiteStar setTitleColor:[UIColor colorWithRed:56/255.0 green:106/255.0 blue:217/255.0 alpha:1.0] forState:UIControlStateNormal];
     }
 
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@", muppet.thumbUrl]];
@@ -139,7 +139,6 @@
     
     if(muppets) {
         for (NSDictionary *object in muppets[@"items"]) {
-            NSLog(@"%@",object);
             Muppet *muppet = [[Muppet alloc]init];
             
             muppet.thumbUrl = object[@"thumbnail"];

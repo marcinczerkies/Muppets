@@ -25,8 +25,11 @@
     // Configure the view for the selected state
 }
 - (IBAction)addToFavoruites:(UIButton *)sender {
-
-    NSNumber *uid = [NSNumber numberWithInt:[self.uid.text integerValue]];
+    
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    
+    NSNumber *uid = [f numberFromString:self.uid.text];
 
     if ( [[QASharedModel qaSharedModel].FavouritesList containsObject:uid] ) {
 

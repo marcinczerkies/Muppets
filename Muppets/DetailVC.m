@@ -53,17 +53,16 @@ NSString *const BasePath = @"http://muppet.wikia.com";
     if ( [[QASharedModel qaSharedModel].FavouritesList containsObject:uid] ) {
         
         [[QASharedModel qaSharedModel].FavouritesList removeObject:uid];
-        
-        [[NSUserDefaults standardUserDefaults] setObject:[QASharedModel qaSharedModel].FavouritesList forKey:@"favoruites"];
-        
         [self.favoruiteStar setTitleColor:[UIColor colorWithRed:9/255.0 green:80/255.0 blue:208/255.0 alpha:1.0] forState:UIControlStateNormal];
         
     }
     else {
         [[QASharedModel qaSharedModel].FavouritesList addObject:uid];
-              [[NSUserDefaults standardUserDefaults] setObject:[QASharedModel qaSharedModel].FavouritesList forKey:@"favoruites"];
         [self.favoruiteStar setTitleColor:[UIColor colorWithRed:204/255.0 green:204/255.0 blue:0/255.0 alpha:1.0] forState:UIControlStateNormal];
     }
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[QASharedModel qaSharedModel].FavouritesList forKey:@"favoruites"];
 
 
 }

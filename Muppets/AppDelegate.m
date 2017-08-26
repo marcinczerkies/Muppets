@@ -19,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-   
-    [QASharedModel qaSharedModel].FavouritesList  = [[[NSUserDefaults standardUserDefaults] objectForKey:@"favoruites"] mutableCopy];
+    
+    [QASharedModel qaSharedModel].FavouritesList = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"favoruites"]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

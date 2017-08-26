@@ -16,20 +16,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiD-Ec-wgK">
-                    <rect key="frame" x="0.0" y="18" width="109" height="32"/>
+                    <rect key="frame" x="4" y="14" width="109" height="36"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="109" id="eT8-CN-aU7"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                     <state key="normal" title="All Muppets"/>
                     <connections>
                         <action selector="showAll:" destination="-1" eventType="touchUpInside" id="dUi-8d-4f2"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hf-YY-ZjN">
-                    <rect key="frame" x="287" y="18" width="80" height="32"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                    <state key="normal" title="Favoruites">
+                    <rect key="frame" x="278" y="14.5" width="89" height="36"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="Favourites">
                         <color key="titleColor" red="0.21901348233222961" green="0.41376668214797974" blue="0.85095936059951782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -42,7 +42,7 @@
                 <constraint firstItem="LiD-Ec-wgK" firstAttribute="baseline" secondItem="7Hf-YY-ZjN" secondAttribute="baseline" id="3Tw-gc-HkZ"/>
                 <constraint firstAttribute="bottom" secondItem="LiD-Ec-wgK" secondAttribute="bottom" id="A5v-Sj-Vqg"/>
                 <constraint firstAttribute="trailing" secondItem="7Hf-YY-ZjN" secondAttribute="trailing" constant="8" id="bO3-ZA-X0p"/>
-                <constraint firstItem="LiD-Ec-wgK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jYu-Q7-rXQ"/>
+                <constraint firstItem="LiD-Ec-wgK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="jYu-Q7-rXQ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

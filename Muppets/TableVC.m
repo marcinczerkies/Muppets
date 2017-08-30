@@ -11,6 +11,7 @@
 #import "Muppet.h"
 #import "DetailVC.h"
 #import "QASharedModel.h"
+#import "DataImport.h"
 
 @interface TableVC ()
 
@@ -21,10 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = @"Muppets List";
-    [self.tableView setContentInset:UIEdgeInsetsMake(0,0,0,0)];
-    
     [self initData];
 
 }
@@ -124,33 +121,8 @@
 -(void)initData {
     
     self.muppets = [[NSMutableArray alloc]init];
-    
-    NSURL *url = [NSURL URLWithString:@"http://muppet.wikia.com/api/v1/Articles/Top?expand=1&category=The_Muppets_Characters&limit=75"];
-    
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    
-    if( data == nil){
-        //  NSLog(@"Nie ma pliku");
-    }
-    
-    NSError *error = nil;
-    
-    NSDictionary *muppets = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-    
-    if(muppets) {
-        for (NSDictionary *object in muppets[@"items"]) {
-            Muppet *muppet = [[Muppet alloc]init];
-            
-            muppet.thumbUrl = object[@"thumbnail"];
-            muppet.desc = object[@"abstract"];
-            muppet.title = object[@"title"];
-            muppet.uid = object[@"id"];
-            muppet.urlWeb = object[@"url"];
-            
-            [self.muppets addObject:muppet];
-        }
-    }
-
+    DataImport *dataImport = [[DataImport alloc]init];
+    self.muppets = [dataImport importData];
 }
 
 

@@ -9,6 +9,7 @@
 #import "DetailVC.h"
 #import "TableVC.h"
 #import "QASharedModel.h"
+#import "DataImport.h"
 
 
 @interface DetailVC ()
@@ -17,13 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *desc;
 @property (weak, nonatomic) IBOutlet UIButton *favoruiteStar;
 
-
-
 @end
 
 @implementation DetailVC
-
-NSString *const BasePath = @"http://muppet.wikia.com";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,7 +44,7 @@ NSString *const BasePath = @"http://muppet.wikia.com";
     
 }
 - (IBAction)addToFavoruite:(UIButton *)sender {
-    
+    	
     NSNumber *uid = self.muppet.uid;
     
     if ( [[QASharedModel qaSharedModel].FavouritesList containsObject:uid] ) {
@@ -68,7 +65,7 @@ NSString *const BasePath = @"http://muppet.wikia.com";
 }
 - (IBAction)openUrl:(UIButton *)sender {
     
-    NSString *urlWeb = [NSString stringWithFormat:@"%@%@", BasePath, self.muppet.urlWeb];
+    NSString *urlWeb = [NSString stringWithFormat:@"%@%@", @BasePath, self.muppet.urlWeb];
 
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlWeb]]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlWeb] options:@{} completionHandler:nil];

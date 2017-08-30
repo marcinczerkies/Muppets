@@ -18,6 +18,7 @@
 		F21EA3581F4BEEDA009AFF00 /* Muppet.m in Sources */ = {isa = PBXBuildFile; fileRef = F21EA3571F4BEEDA009AFF00 /* Muppet.m */; };
 		F21EA35D1F4DD76C009AFF00 /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F21EA35B1F4DD76C009AFF00 /* DetailVC.m */; };
 		F21EA35E1F4DD76C009AFF00 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21EA35C1F4DD76C009AFF00 /* DetailVC.xib */; };
+		F29293361F56B9F4001B9063 /* DataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = F29293351F56B9F4001B9063 /* DataImport.m */; };
 		F2AFCE681F4FE23C007BC7A4 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2AFCE671F4FE23C007BC7A4 /* View.xib */; };
 		F2E9FCFC1F4EB56A0092F3BE /* QASharedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E9FCFB1F4EB56A0092F3BE /* QASharedModel.m */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,8 @@
 		F21EA35A1F4DD76C009AFF00 /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
 		F21EA35B1F4DD76C009AFF00 /* DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
 		F21EA35C1F4DD76C009AFF00 /* DetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
+		F29293351F56B9F4001B9063 /* DataImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataImport.m; sourceTree = "<group>"; };
+		F29293371F56BA00001B9063 /* DataImport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataImport.h; sourceTree = "<group>"; };
 		F2AFCE671F4FE23C007BC7A4 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		F2E9FCFA1F4EB56A0092F3BE /* QASharedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QASharedModel.h; sourceTree = "<group>"; };
 		F2E9FCFB1F4EB56A0092F3BE /* QASharedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QASharedModel.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				F2E9FCFB1F4EB56A0092F3BE /* QASharedModel.m */,
 				F21EA3571F4BEEDA009AFF00 /* Muppet.m */,
 				F21EA3591F4BEF03009AFF00 /* Muppet.h */,
+				F29293371F56BA00001B9063 /* DataImport.h */,
+				F29293351F56B9F4001B9063 /* DataImport.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				F21EA3531F4BE3B0009AFF00 /* TableViewCell.m in Sources */,
 				F21EA3581F4BEEDA009AFF00 /* Muppet.m in Sources */,
 				F21EA35D1F4DD76C009AFF00 /* DetailVC.m in Sources */,
+				F29293361F56B9F4001B9063 /* DataImport.m in Sources */,
 				F21EA3271F45F57D009AFF00 /* AppDelegate.m in Sources */,
 				F21EA3241F45F57D009AFF00 /* main.m in Sources */,
 				F2E9FCFC1F4EB56A0092F3BE /* QASharedModel.m in Sources */,

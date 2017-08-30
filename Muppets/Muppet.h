@@ -14,5 +14,4 @@
 @property (strong, nonatomic) NSString *thumbUrl;
 @property (strong, nonatomic) NSNumber *uid;
 @property (strong, nonatomic) NSString *urlWeb;
-#define BASEPATH @"http://muppet.wikia.com"
 @end
